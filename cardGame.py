@@ -1,4 +1,5 @@
 import random
+#GLobal variables 
 values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five':5, 'Six':6,
            'Seven':7, 'Eight':8, 'Nine':9,
           'Ten':10, 'Jack':11, 'Queen':12, 'King':13, 'Ace':14}
@@ -6,6 +7,7 @@ suits =('Hearts', 'Diamonds','Spades', 'Clubs')
 ranks = ('Two','Three','Four','Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten',
         'Jack', 'Queen', 'King', 'Ace')
 class Card:
+    #instatiating a class 
     def __init__(self, suit, rank):
         self.suit = suit
         self.rank = rank
@@ -22,7 +24,7 @@ print(two_hearts.value)
 class Deck:
     def __init__(self):
         self.all_cards = []
-
+#for loop that prints out card type that uses both the suit and attributes
         for suit in suits:
             for rank in ranks:
                 created_card = Card(suit, rank)
@@ -30,7 +32,7 @@ class Deck:
 
     def shuffle(self):
         random.shuffle(self.all_cards)
-
+#the deal_one function removes the last card in the deck
     def deal_one(self):
         return self.all_cards.pop() 
             

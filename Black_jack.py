@@ -144,7 +144,6 @@ def dealer_wins(chips):
 def push():
     print("Dealer and player tie. PUSH!")
 
-
 while True :
     print("WELCOME TO BLACKJACK")
 
@@ -154,7 +153,7 @@ while True :
     player_hand = Hand()
     player_hand.add_card(deck.deal())
     player_hand.add_card(deck.deal())
-
+    
     dealer_hand = Hand()
     dealer_hand.add_card(deck.deal())
     dealer_hand.add_card(deck.deal())
@@ -197,7 +196,7 @@ while True :
 
     print("\n Player total chips are at: {}".format(player_chips.total))
 
-    new_game = input("Would you like to play another hand? y or n")
+    new_game = input("Would you like to play another hand? y or n \n")
 
     if new_game[0].lower() == 'y':
         playing = True 
