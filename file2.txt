@@ -1,0 +1,1 @@
+the plagiarism detection project checks for copy right content.
