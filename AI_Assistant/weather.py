@@ -14,5 +14,5 @@ def weather():
     unit = r.html.find('div.vk_bk.wob-unit span.wob_t', first=True).text 
     desc = r.html.find('span#wob_dc', first=True).text
     
-    return temp+ " " + unit+" "+ desc
+    return temp + " " + unit + " " + desc
 
