@@ -1,6 +1,8 @@
 from tkinter import* 
 from PIL import Image, ImageTk
 root = Tk()
+import speech_text
+import execute
 
 
 root.title("AI Assistant")
@@ -10,7 +12,9 @@ root.config(bg="#6F8FAF")
 
 #Ask function 
 def ask():
-    print("ask commnd")
+    ask_eval = speech_text()
+    bot_eval = execute.execute(ask_eval)
+    text.insert(END, "user-->"+ask_eval + "\n")
     
 #Delete function
 def delete():
