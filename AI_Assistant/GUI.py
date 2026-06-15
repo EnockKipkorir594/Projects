@@ -12,9 +12,14 @@ root.config(bg="#6F8FAF")
 
 #Ask function 
 def ask():
-    ask_eval = speech_text()
-    bot_eval = execute.execute(ask_eval)
-    text.insert(END, "user-->"+ask_eval + "\n")
+    user_val = speech_text.speech_to_txt()
+    bot_val = execute.execute(user_val)
+    text.insert(END, "user--->"+ user_val + "\n")
+    if bot_val != None:
+        text.insert(END, "BOT <---"+str(bot_val)+ "\n")
+        
+    if bot_val == "this want I found":
+        root.destroy()
     
 #Delete function
 def delete():
