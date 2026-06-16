@@ -23,13 +23,19 @@ def ask():
     
 #Delete function
 def delete():
-    print("Delete command")
+    send = entry.get()
+    bot = execute.execute(send)
+    text.insert(END, "user--->"+ send + "\n")
+    if bot != None:
+        text.insert(END, "BOT <---"+str(bot)+ "\n")
+        
+    if bot == "this want I found":
+        root.destroy()
 
 #Send function
 def send():
-    print("Send command")
+    text.delete("1.0", "end")
     
-
 #frame 
 frame = LabelFrame(root, padx=100, pady=7, borderwidth=3, relief="raised")
 frame.config(bg="#6F8FAF")
